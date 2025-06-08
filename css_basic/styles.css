@@ -1,0 +1,184 @@
+/* Flexbox layout positioning */
+
+/* Make the body a column flex container */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Make main a row flex container */
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto; /* allow main to grow and fill space */
+}
+
+/* Article takes 2/3 of the main's width */
+article {
+    flex: 2;
+    overflow-y: auto;
+}
+
+/* Aside takes 1/3 of the main's width */
+aside {
+    flex: 1;
+    overflow-y: auto;
+}
+/* styles.css */
+
+/* styles.css */
+
+/* General page styles */
+body {
+  background-color: #fefefe;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Header styling */
+header ul {
+  background-color: #fff;
+  border-bottom: 2px solid #f80002;
+  padding: 15px 20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+header li {
+  margin: 0 15px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+header a:hover,
+header a:focus {
+  color: #d00000;
+  text-decoration: underline;
+}
+
+/* Main content layout */
+main {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0 15px;
+}
+
+article {
+  flex: 3;
+  background-color: #fff;
+  padding: 20px 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 6px;
+}
+
+/* Aside styling */
+aside {
+  flex: 1;
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.03);
+  font-style: italic;
+  color: #666;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f80002;
+  color: #fff;
+  font-weight: 700;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #f80002;
+  margin-bottom: 15px;
+}
+
+/* Links */
+a {
+  color: #f80002;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 50px;
+  font-size: 14px;
+  color: #999;
+  border-top: 1px solid #ddd;
+}
+.logo {
+  font-size: 2rem;
+  margin-right: 20px;
+}
+header ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+article p {
+  line-height: 1.8;
+  margin-bottom: 1.2em;
+}
+
+article h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-top: 25px;
+  border-left: 5px solid #f80002;
+  padding-left: 10px;
+}
+body {
+  background-color: #f4f4f8;
+}
+
+aside {
+  background-color: #fff3f3;
+  color: #444;
+}
+
+
+
+
+/* Responsive: stack main content on smaller screens */
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+  aside {
+    margin-top: 30px;
+  }
+}
+
+
