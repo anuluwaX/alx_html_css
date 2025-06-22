@@ -1,0 +1,251 @@
+:root {
+  --primary-color: #FF6565;
+  --text-color: #fff;
+  --font-main: 'Source Sans Pro', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+header {
+  background-image: url(images/headphones_hero_1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 800px;
+  color: var(--text-color);
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 60px;
+  position: relative;
+}
+
+/* Logo aligned left on desktop */
+.logo {
+  width: 170px;
+}
+
+/* Hamburger hidden on desktop */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+/* Desktop nav list */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  font-size: 12px;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.nav-list li a:hover,
+.nav-list li a:active {
+  color: var(--primary-color);
+}
+
+/* Hide mobile menu by default */
+.nav-list-mobile {
+  display: none;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* ===== HERO ===== */
+.header-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 650px;
+  width: 100%;
+  margin: 300px auto;
+  padding: 0 20px;
+}
+
+.header-title h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.header-title p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.header-content {
+  padding-top: 20px;
+  font-size: 15px;
+  font-weight: lighter;
+  line-height: 1.5;
+}
+
+/* CTA Button */
+.btn {
+  background-color: var(--primary-color);
+  padding: 12px 25px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--text-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 30px auto;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #f51f1f;
+}
+
+/* ===== MOBILE VIEW ===== */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: flex-start;
+    padding: 20px;
+  }
+
+  /* Show hamburger on mobile */
+  .menu-icon {
+    display: block;
+    z-index: 1001;
+  }
+
+  /* Center logo */
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+  }
+
+  /* Hide desktop nav */
+  .nav-list {
+    display: none;
+  }
+
+  /* Show mobile nav when hamburger checked */
+  #menu-toggle:checked ~ .nav-list-mobile {
+    display: flex;
+  }
+
+  .nav-list-mobile {
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    list-style: none; /* ✅ No bullets */
+    background: none;  /* ✅ No background */
+    padding: 0;
+    margin-top: 10px;
+    z-index: 999;
+  }
+
+  .nav-list-mobile li {
+    margin: 10px 0; /* ✅ Spacing */
+  }
+
+  .nav-list-mobile a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+
+  .nav-list-mobile a:hover {
+    color: var(--primary-color);
+  }
+
+  .header-title {
+    margin-top: 180px;
+  }
+}
+/* WHAT WE DO Section */
+#what-we-do {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.wwd-par {
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+}
+
+.wwd-par h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.wwd-par p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.wwd-icon-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wwd-icon {
+  width: 22%;
+  min-width: 180px;
+}
+
+.wwd-icon span {
+  font-size: 50px;
+  color: #FF6565;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.wwd-icon p {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .wwd-icon-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wwd-icon {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
